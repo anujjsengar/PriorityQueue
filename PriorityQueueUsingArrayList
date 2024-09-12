@@ -1,0 +1,17 @@
+import java.util.*;
+public abstract class PriorityQueueUsingArrayList{
+    ArrayList<Integer> list=new ArrayList<>();
+    public int size(){
+        return list.size();
+    }
+    public abstract void add(int data);
+    public int poll(){
+        if(li.size()==0){
+            System.out.println("Empty!");
+            return -1;
+        }
+        int x=li.get(0);
+        li.remove(0);
+        return x;
+    }
+}
