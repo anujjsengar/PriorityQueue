@@ -1,5 +1,5 @@
 import java.util.*;
-public class PriorityQueueUsingArrayListMinToMax extends PriorityQueueUsingArrayList{
+public class PriorityQueueUsingArrayListMaxToMin extends PriorityQueueUsingArrayList{
     @Override
     public void add(int data){
         list.add(data);
@@ -8,15 +8,15 @@ public class PriorityQueueUsingArrayListMinToMax extends PriorityQueueUsingArray
     @Override
     public int poll(){
         if(list.size()==0){
-        System.out.println("Empty !");
-        return -1;
+            System.out.println("Empty !");
+            return -1;
         }
-        int i=list.get(0);
-        list.remove(0);
-        return i;
+        int x=list.get(list.size()-1);
+        list.remove(list.size()-1);
+        return x;
     }
     public static void main(String args[]){
-        PriorityQueueUsingArrayListMinToMax obj=new PriorityQueueUsingArrayListMinToMax();
+        PriorityQueueUsingArrayListMaxToMin obj=new PriorityQueueUsingArrayListMaxToMin();
         obj.add(12);
         obj.add(10);
         obj.add(12);
